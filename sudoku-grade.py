@@ -30,13 +30,10 @@ def square(board): #3×3칸 채점 함수
         j = 0  #j값 초기화
     return True #모든 3×3칸에 중복이 없다면 True 반환
 
-# 2. 스도쿠판 입력
+# 2. 스도쿠 판 입력
 print("< 스도쿠 채점 프로그램 >")
 print("채점할 스도쿠 판을 입력하세요.")
-sudoku = [] #스도쿠 판 리스트
-for i in range(9):
-    h = list(map(int, input().split())) #가로줄 리스트
-    sudoku.append(h)
+sudoku = [list(map(int, input().split())) for _ in range(9)] #스도쿠 판 리스트
 
 # 3. 스도쿠 채점 결과 출력
 if not horizontal(sudoku): #가로줄 채점 반환값이 False일 경우
